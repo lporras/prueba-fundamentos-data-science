@@ -18,9 +18,10 @@ import seaborn as sns
 # Función para graficar variables en un Data Frame
 def visualize_rows (df):
     for n, i in enumerate(df):
+        plt.rcParams['figure.figsize'] = (10, 6)
         plt.subplot((len(list(df.columns))/3)+1,3,n+1)
         if df[i].dtypes ==float:
-            sns.distplot(df[i])
+            sns.distplot(df[i].dropna())
             plt.title(i)
             plt.xlabel("")
         elif df[i].dtypes =="object":
@@ -28,7 +29,7 @@ def visualize_rows (df):
             plt.title(i)
             plt.xlabel("")
         else:
-            sns.distplot(df[i],kde=False)
+            sns.distplot(df[i].dropna(),kde=False)
             plt.title(i)
             plt.xlabel("")
     plt.tight_layout()
@@ -62,6 +63,3 @@ def binarize_columns(dataframe, columns):
         print(f"Analizando Datos Binarizados de la variable: {variable}")
         print(tmp_dataframe[binary_column].value_counts())
     return tmp_dataframe
-
-
-
