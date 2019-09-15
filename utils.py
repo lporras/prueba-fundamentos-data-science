@@ -3,10 +3,21 @@
 
 """
 File: utils.py
-Author: Luis Alfredo Porras Páez
-Email: lporras16[at]gmail[dot]com
-Github: https://github.com/lporras
-Description: Funciones Útiles para los desafios de la Prueba
+Author(s):
+    *   Jose Gonzalez
+    *   Catalina Cerda
+    *   Luis Alfredo Porras Páez
+Email(s):
+    *   cotegl@gmail.com
+    *   catalina.cerda@usach.cl
+    *   lporras16@gmail.com
+Github[s]:
+    * https://github.com/catalinacerda
+    * https://github.com/cotegl
+    * https://github.com/lporras
+Description:
+    Este archivo python contiene subrutinas utilizadas para brindar soluciones
+    a la prueba final del 2do Módulo: Fundamentos de Data Science Generación 9!
 """
 
 #Importar librerias
@@ -17,14 +28,26 @@ import seaborn as sns
 
 # Función para graficar variables en un Data Frame
 def visualize_rows (df):
+    """
+    Definición:
+    Dado un DataFrame se itera por filas
+    y genera gráficos dependiendo al tipo de columna
+
+    Parámetros de ingreso:
+    - df: Tipo de dato: DataFrame.  Base de Datos a visualizar
+    - columns: Tipo de dato: Array. Lista de nombres de las columnas a binarizar
+
+    Retorno:
+    - None
+    """
     for n, i in enumerate(df):
         plt.rcParams['figure.figsize'] = (10, 6)
         plt.subplot((len(list(df.columns))/3)+1,3,n+1)
-        if df[i].dtypes ==float:
+        if df[i].dtypes == float:
             sns.distplot(df[i].dropna())
             plt.title(i)
             plt.xlabel("")
-        elif df[i].dtypes =="object":
+        elif df[i].dtypes == "object":
             sns.countplot(df[i])
             plt.title(i)
             plt.xlabel("")
@@ -33,6 +56,7 @@ def visualize_rows (df):
             plt.title(i)
             plt.xlabel("")
     plt.tight_layout()
+    return None
 
 # Función Binarizadora de columnas de un Data Frame
 def binarize_columns(dataframe, columns):
