@@ -27,7 +27,7 @@ import matplotlib.pyplot as plt
 import seaborn as sns
 
 # Función para graficar variables en un Data Frame
-def visualize_rows (df):
+def visualize_rows (df, width=12, height=12):
     """
     Definición:
     Dado un DataFrame se itera por filas
@@ -35,13 +35,13 @@ def visualize_rows (df):
 
     Parámetros de ingreso:
     - df: Tipo de dato: DataFrame.  Base de Datos a visualizar
-    - columns: Tipo de dato: Array. Lista de nombres de las columnas a binarizar
-
+    - width: Tipo de dato: Float. Usada para configurar el ancho de cada gráfico
+    - height: Tipo de dato: Float. Usada para configurar el alto de cada gráfico
     Retorno:
     - None
     """
     for n, i in enumerate(df):
-        plt.rcParams['figure.figsize'] = (10, 6)
+        plt.rcParams['figure.figsize'] = (width, height)
         plt.subplot((len(list(df.columns))/3)+1,3,n+1)
         if df[i].dtypes == float:
             sns.distplot(df[i].dropna())
@@ -55,7 +55,8 @@ def visualize_rows (df):
             sns.distplot(df[i].dropna(),kde=False)
             plt.title(i)
             plt.xlabel("")
-    plt.tight_layout()
+        plt.tight_layout()
+        plt.show()
     return None
 
 # Función Binarizadora de columnas de un Data Frame
