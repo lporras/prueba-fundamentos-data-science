@@ -21,3 +21,30 @@
  - Todo output generado debe estar acompañado por una breve explicación.
  - Por razones de sanitización del notebook, se recomienda incluír el módulo `warnings` para evitar avisos de deprecación.
  - Puede hablar y discutir su avance con sus compañeros, pero bajo ningún motivo deben compartirse respuestas textuales y/o código.  En caso de discutir su avance con su compañeros, agregue al final del notebook con quiénes colaboró en cada respuesta.
+
+## Feedback Profesor (TODO):
+
+**Desafío 1:**
+ - [ ] No define el tipo de problema a resolver.
+ - [ ] No define el tipo de problema a resolver.
+ - [ ] No menciona ni justifica el uso de métricas.
+ - [ ] Inspección visual de Variable: Inspecciona DataFrame `df`, pero habían hecho el preprocesamiento en el DataFrame `df_subset`.
+ - [ ]  ¿Por qué usan `smf.ols`?
+ - [ ]  No interpreta los principales regresores.
+ - [ ] No define las estrategias de Modelación predictiva.
+ - [ ] No implementa al menos 3 modelos predictivos.
+ - [ ] No genera un reporte del mejor modelo (según los resultados).
+
+**Desafío 2:**
+
+ - [ ] No define el tipo de problema a resolver.
+ - [ ] No menciona ni justifica el uso de métricas.
+ - [ ] **Hito 3:** sólo modela con G3.
+ - [ ] No implementa al menos 3 modelos predictivos.
+ - [ ] No genera un reporte del mejor modelo (según los resultados).
+ - [ ] No hizo el análisis factorial (bonus).
+
+**En general:**
+
+ - [ ] No uso `docstrings` en las funciones implementadas.
+
