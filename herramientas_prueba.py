@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 """
-File: utils.py
+File: herramientas_prueba.py
 Author(s):
     *   Jose Gonzalez
     *   Catalina Cerda
@@ -16,7 +16,7 @@ Github[s]:
     * https://github.com/cotegl
     * https://github.com/lporras
 Description:
-    Este archivo python contiene subrutinas utilizadas para brindar soluciones
+    Este archivo python contiene sub rutinas utilizadas para brindar soluciones
     a la prueba final del 2do Módulo: Fundamentos de Data Science Generación 9!
 """
 
