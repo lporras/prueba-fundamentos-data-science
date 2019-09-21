@@ -113,8 +113,6 @@ def print_logit_estimations(modelo_logit, predicate):
     print(msg)
     return None
 
-
-
 # Función para graficar variables en un Data Frame
 def visualize_rows (df, width=12, height=12, title=None):
     """
